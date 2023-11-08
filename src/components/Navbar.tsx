@@ -2,14 +2,14 @@ import Button from './Button'
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { auth, provider } from '../config/firebase'
-import { signInWithRedirect, signOut } from 'firebase/auth'
+import { signInWithPopup, signOut } from 'firebase/auth'
 
 const Navbar = () => {
     const [isVisible, setIsVisible] = useState(false);
     const navigate = useNavigate();
 
     const signInOnClick = () => {
-        signInWithRedirect(auth, provider.google);
+        signInWithPopup(auth, provider.google);
     }
 
     const signOutOnClick = () => {

@@ -1,7 +1,7 @@
 import { useEffect, useState} from "react"
 import { useNavigate } from "react-router-dom"
 import { auth, provider } from "../config/firebase"
-import { signInWithRedirect } from "firebase/auth"
+import { signInWithPopup } from "firebase/auth"
 
 interface Props {
     children: React.ReactNode;
@@ -16,7 +16,7 @@ const AuthChecker = ({children}: Props) => {
             if(user) {
                 setIsLoading(false)
             } else {
-                await signInWithRedirect(auth, provider.google)
+                await signInWithPopup(auth, provider.google)
             }
         });
 
