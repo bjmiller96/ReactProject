@@ -42,11 +42,17 @@ const Navbar = () => {
                         <Link to='/'>
                             <Button onClick={clicked} className="bg-white border-white hover:text-white hover:bg-gray-400 p-2 m-2 rounded transition duration-150">Home</Button>
                         </Link>
-                        <Link to='/about'>
-                            <Button onClick={clicked} className="bg-white border-white hover:text-white hover:bg-gray-400 p-2 m-2 rounded transition duration-150">About</Button>
+                        <Link to='/theapp'>
+                            <Button onClick={clicked} className="bg-white border-white hover:text-white hover:bg-gray-400 p-2 m-2 rounded transition duration-150">The App</Button>
                         </Link>
                         <Link to='/dashboard'>
                             <Button onClick={clicked} className="bg-white border-white hover:text-white hover:bg-gray-400 p-2 m-2 rounded transition duration-150">Dashboard</Button>
+                        </Link>
+                        <Link to='/thedeveloper'>
+                            <Button onClick={clicked} className="bg-white border-white hover:text-white hover:bg-gray-400 p-2 m-2 rounded transition duration-150">The Developer</Button>
+                        </Link>
+                        <Link to='/contact'>
+                            <Button onClick={clicked} className="bg-white border-white hover:text-white hover:bg-gray-400 p-2 m-2 rounded transition duration-150">Contact</Button>
                         </Link>
                         {!auth.currentUser ? (
                             <Link to="/" onClick={signInOnClick}>

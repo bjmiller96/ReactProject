@@ -1,3 +1,5 @@
 export * from './Home'
-export * from './About'
+export * from './TheDeveloper'
+export * from './TheApp'
 export * from './Dashboard'
+export * from './Contact'
